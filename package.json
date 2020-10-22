@@ -1,5 +1,6 @@
 {
   "name": "youtube-dl-web",
+  "repository": "https://github.com/saanuregh/youtube-dl-web.git",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
