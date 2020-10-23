@@ -1,4 +1,5 @@
 import absoluteUrl from "next-absolute-url";
+import queryString from "query-string";
 import Scrollbar from "react-scrollbars-custom";
 
 import Entry from "../../components/entry";
@@ -36,10 +37,10 @@ export default function Result({ data, error, statusCode, origin }) {
   );
 }
 
-export async function getServerSideProps({ req, query: { q, f } }) {
+export async function getServerSideProps({ req, query }) {
   const { origin } = absoluteUrl(req);
   const props = { data: null, error: null, origin, statusCode: 200 };
-  const res = await fetch(`${origin}/api?q=${q}&f=${f.id.replace("+", "%2B")}`);
+  const res = await fetch(`${origin}/api/info?${queryString.stringify(query)}`);
   if (res.status === 200) {
     props.data = await res.json();
   } else {

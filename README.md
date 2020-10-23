@@ -12,7 +12,7 @@ Deploy the example using [Vercel](https://vercel.com):
 
 ### To download
 
-`http://localhost:3000/api`
+`/api/download`
 
 #### parameters
 
@@ -21,7 +21,7 @@ Deploy the example using [Vercel](https://vercel.com):
 
 ### To get info
 
-`http://localhost:3000/api/info`
+`/api/info`
 
 #### parameters
 

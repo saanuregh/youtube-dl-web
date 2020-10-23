@@ -1,4 +1,5 @@
 import prettyMilliseconds from "pretty-ms";
+import queryString from "query-string";
 import { useState } from "react";
 
 const format_keys = [
@@ -110,10 +111,10 @@ export default function Entry({ data, origin }) {
             {downloads.map((f) => (
               <a
                 key={f.id}
-                href={`${origin}/api?url=${data.webpage_url}&f=${f.id.replace(
-                  "+",
-                  "%2B"
-                )}`}
+                href={`${origin}/api/download?${queryString.stringify({
+                  f: f.id,
+                  url: data.webpage_url,
+                })}`}
               >
                 <button
                   type="button"

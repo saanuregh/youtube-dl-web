@@ -24,7 +24,7 @@ export default function IndexPage({ origin }) {
         </h1>
         <span className="text-sm font-bold xl:text-base">
           to download -{" "}
-          <span className="px-1 font-mono bg-bunker-600">{`${origin}/api`}</span>
+          <span className="px-1 font-mono bg-bunker-600">{`${origin}/api/download`}</span>
         </span>
         <div className="mb-1 font-mono text-xs">
           <span className="font-bold">parameters</span>
@@ -38,7 +38,7 @@ export default function IndexPage({ origin }) {
               >
                 youtube-dl format
               </a>{" "}
-              (default: bestvideo+bestaudio/best)
+              {`(default: ${INIT_FORM.format})`}
             </li>
           </ul>
         </div>
@@ -58,7 +58,7 @@ export default function IndexPage({ origin }) {
               >
                 youtube-dl format
               </a>{" "}
-              (default: bestvideo+bestaudio/best)
+              {`(default: ${INIT_FORM.format})`}
             </li>
           </ul>
         </div>

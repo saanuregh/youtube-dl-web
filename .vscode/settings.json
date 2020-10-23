@@ -1,4 +1,0 @@
-{
-	"eslint.enable": true,
-	"python.formatting.provider": "black"
-}

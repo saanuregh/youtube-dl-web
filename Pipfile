@@ -4,14 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-black = "*"
 uvicorn = "*"
 
 [packages]
-youtube-dl = "*"
-ffmpeg-python = "*"
+youtube_dl = "*"
 fastapi = "*"
-rfc6266-parser = "*"
 
 [requires]
 python_version = "3.8"
