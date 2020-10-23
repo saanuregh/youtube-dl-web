@@ -2,7 +2,6 @@ import absoluteUrl from "next-absolute-url";
 import Scrollbar from "react-scrollbars-custom";
 
 import Entry from "../../components/entry";
-import { ytdlInfo } from "../../lib/ytdl";
 import Error from "../_error";
 
 export default function Result({ data, error, statusCode, origin }) {
@@ -40,11 +39,12 @@ export default function Result({ data, error, statusCode, origin }) {
 export async function getServerSideProps({ req, query: { q, f } }) {
   const { origin } = absoluteUrl(req);
   const props = { data: null, error: null, origin, statusCode: 200 };
-  try {
-    props.data = await ytdlInfo(q, f, true);
-  } catch (error) {
-    props.error = error.stderr || error.message;
+  const res = await fetch(`${origin}/api?q=${q}&f=${f.id.replace("+", "%2B")}`);
+  if (res.status === 200) {
+    props.data = await res.json();
+  } else {
     props.statusCode = 400;
+    props.error = await res.text();
   }
   return { props };
 }

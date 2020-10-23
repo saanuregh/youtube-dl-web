@@ -1,0 +1,14 @@
+{
+	"version": 2,
+	"functions": {
+		"api/index.py": {
+			"includeFiles": "bin/**"
+		}
+	},
+	"routes": [
+		{
+			"src": "/api",
+			"dest": "api/index.py"
+		}
+	]
+}
