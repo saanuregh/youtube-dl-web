@@ -33,9 +33,9 @@ async def get_info(q: str, f: str = DEFAULT_FORMAT):
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         try:
             res = ydl.extract_info(q, download=False)
-            return JSONResponse(res, headers={"Cache-Control": "max-age=0, s-maxage=2592000"})
+            return JSONResponse(res, headers={"Cache-Control": "max-age=2592000, s-maxage=2592000"})
         except Exception as e:
-            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=repr(e))
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=repr(e), headers={"Cache-Control": "no-store, max-age=0"})
 
 
 @app.get("/api/version", status_code=status.HTTP_200_OK)
