@@ -1,10 +1,5 @@
 {
-  "extends": [
-    "plugin:prettier/recommended",
-    "prettier/react",
-    "prettier/standard",
-    "galex"
-  ],
+  "extends": ["plugin:prettier/recommended", "prettier", "galex"],
   "rules": {
     "sonarjs/no-useless-catch": "off",
     "sonarjs/no-duplicate-string": "off",
@@ -13,7 +8,6 @@
     "jsx-a11y/control-has-associated-label": "off",
     "inclusive-language/use-inclusive-words": "off",
     "import/no-default-export": "off",
-    "require-await": "off",
-    "prettier/prettier": "error"
+    "require-await": "off"
   }
 }

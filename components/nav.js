@@ -3,8 +3,7 @@ import Link from "next/link";
 const links = [
   { href: "https://github.com/vercel/next.js", label: "github" },
   {
-    href:
-      "https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md",
+    href: "https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md",
     label: "supported sites",
   },
 ];

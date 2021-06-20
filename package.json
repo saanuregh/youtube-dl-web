@@ -11,26 +11,29 @@
   },
   "dependencies": {
     "content-disposition": "^0.5.3",
-    "execa": "^4.0.3",
+    "execa": "^5.1.1",
     "ffmpeg-static": "^4.2.7",
-    "next": "latest",
+    "next": "^11.0.0",
     "next-absolute-url": "^1.2.2",
     "node-fetch": "^2.6.1",
     "nprogress": "^0.2.0",
     "pretty-ms": "^7.0.1",
-    "query-string": "^6.13.6",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "query-string": "^7.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-scrollbars-custom": "^4.0.25"
   },
   "devDependencies": {
     "@types/fluent-ffmpeg": "^2.1.16",
     "eslint": "^7.11.0",
     "eslint-config-galex": "^2.5.11",
-    "postcss-flexbugs-fixes": "4.2.1",
+    "eslint-config-next": "^11.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "postcss": "^8.3.5",
+    "postcss-flexbugs-fixes": "5.0.2",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2",
-    "tailwindcss": "^1.9.5"
+    "tailwindcss": "^2.2.2"
   },
   "license": "MIT"
 }
